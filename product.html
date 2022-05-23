@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="https://www.paypal.com/sdk/js?client-id=AaHwjsQjQZMSj6AiDOkeKBCV2qoNiMpBaEwMKLwse4rG4dU1RmqGxAn1xgVhLUCDGVdx1HhGq-lZAed6"></script>
+</head>
+<body>
+    <section class="itemX">
+        <div class="itemCont">
+        <p class="bold" id="itemXName"></p>
+        <img id="itemXImg">
+        <p id="itemXDesc"></p>
+        <p class="bold" id="itemXPrice"></p>
+        </div>
+        <div class="priceCont">
+        <label for="" >Enter no. of items
+            <input  class="noOfItems" id="noOfItems" type="number"value="">
+
+        </label>
+        <div class="deliveryLoc">
+            <select id="locationOpt">
+                <option>Select location</option>
+                <option id="Nairobi" value="Nairobi">Nairobi</option>
+                <option id="Kiambu" value="Kiambu">Kiambu</option>
+                <option id="Kajiado" value="Kajiado">Kajiado</option>
+            </select>
+            <select id="locationOpt2" class="hide-location-output2">
+                <option>please select</option>
+                <option id="optOne"></option>
+                <option id="optTwo"></option>
+                <option id="optThree"></option>
+            </select>
+        
+        </div>
+        <p id="deliveryPrice" class="deliveryMsg" ></p>
+        <div class="finalPrice">
+            <p>total price:</p>
+        <p id="totalPrice">KES.0</p>
+        </div>
+        <div id="paypal-button-container"></div>
+        <!-- <button class="btn">Buy Now</button> -->
+        </div>
+    </section>
+
+    <script src="JS/product.js"></script>
+</body>
+</html>
