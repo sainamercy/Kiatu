@@ -84,46 +84,45 @@ function totalPrice() {
 
   let priceForDelivery = 0;
 
-    let location = document.getElementById("locationOpt2").value;
-    let msg = "shipping fee to";
+  let location = document.getElementById("locationOpt2").value;
+  let msg = "shipping fee to";
 
-    if (location == "Lavington") {
-      priceForDelivery = 80;
-    } else if (location == "Kilimani") {
-      priceForDelivery = 60;
-    } else if (location == "Westlands") {
-      let price = 40;
-    } else if (location == "Kiambu Township") {
-      priceForDelivery = 100;
-    } else if (location == "Githunguri") {
-      priceForDelivery = 150;
-    } else if (location == "Lower Kabete") {
-      priceForDelivery = 120;
-    } else if (location == "Ongata Rongai") {
-      priceForDelivery = 150;
-    } else if (location == "Kitengela") {
-      priceForDelivery = 180;
-    } else if (location == "Ngong") {
-      priceForDelivery = 120;
-    }
+  if (location == "Lavington") {
+    priceForDelivery = 80;
+  } else if (location == "Kilimani") {
+    priceForDelivery = 60;
+  } else if (location == "Westlands") {
+    let price = 40;
+  } else if (location == "Kiambu Township") {
+    priceForDelivery = 100;
+  } else if (location == "Githunguri") {
+    priceForDelivery = 150;
+  } else if (location == "Lower Kabete") {
+    priceForDelivery = 120;
+  } else if (location == "Ongata Rongai") {
+    priceForDelivery = 150;
+  } else if (location == "Kitengela") {
+    priceForDelivery = 180;
+  } else if (location == "Ngong") {
+    priceForDelivery = 120;
+  }
 
-   if(priceForDelivery){
+  if (priceForDelivery) {
     document.getElementById("deliveryPrice").innerText =
-    "+ KES. " + priceForDelivery + " " + msg + " " + location;
-   }
+      "+ KES. " + priceForDelivery + " " + msg + " " + location;
+  }
 
   document.getElementById("totalPrice").innerText =
-    "KES." +(total + priceForDelivery);
+    "KES." + (total + priceForDelivery);
 
-    return total + priceForDelivery
+  return total + priceForDelivery;
 }
 
 totalPrice();
-document.getElementById("noOfItems").onkeyup = totalPrice
+document.getElementById("noOfItems").onkeyup = totalPrice;
 document.getElementById("locationOpt2").onchange = totalPrice;
 
-
-function payNow() {    
+function payNow() {
   paypal
     .Buttons({
       createOrder: function (data, actions) {
@@ -138,12 +137,12 @@ function payNow() {
           ],
         });
       },
-      onApprove: function(data, actions) {
-        alert('Payment successfully');
-    },
-    onCancel: function (data) {
-        alert('Payment Not successfully');
-      }
+      onApprove: function (data, actions) {
+        alert("Payment successfully");
+      },
+      onCancel: function (data) {
+        alert("Payment Not successfully");
+      },
     })
     .render("#paypal-button-container");
 }
