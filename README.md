@@ -1,2 +1,2 @@
 # Kiatu
-Shoes Collection 
+JavaScript-PayPal payment integration(Demo)
