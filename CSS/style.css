@@ -57,8 +57,11 @@ p {
   width: 300px;
   margin-left: 5px;
 }
+.itemCont{
+  width: 50%;
+}
 .priceCont {
-  width: 1000px;
+  width: 50%;
   margin-top: 50px;
 }
 #itemXDesc {
@@ -112,4 +115,31 @@ input::-webkit-inner-spin-button {
 
 .hide-location-output2 {
   display: none;
+}
+
+@media(max-width:700px){
+  .products{
+      display: flex;
+      flex-direction: column;  
+      gap: 30px;
+  }
+}
+@media(max-width:900px){
+  .itemX{
+      display: flex;
+      flex-direction: column;  
+      width: 100%;
+  }
+  .itemCont{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+  .priceCont{
+    width: 80%;
+    margin: auto;
+    border: 1px solid rgb(231, 221, 221);
+    box-shadow: gray 5px 5px 6px;
+    margin-bottom: 20px;
+  }
 }
